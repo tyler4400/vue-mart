@@ -22,7 +22,7 @@ const router = new Router({
             path: '/about',
             name: 'about',
             meta: {
-                auth: true
+                auth: true // 把about页面当成必须登录才能访问的页面
             },
             component: () =>
                 import(/* webpackChunkName: "about" */ './views/About.vue')
