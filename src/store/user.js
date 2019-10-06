@@ -1,10 +1,6 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
 import us from '@/service/user';
 
-Vue.use(Vuex);
-
-export default new Vuex.Store({
+export default {
     state: {
         isLogin: Boolean(sessionStorage.getItem('vue-mart-token'))
     },
@@ -33,4 +29,4 @@ export default new Vuex.Store({
             commit('setLoginState', false);
         }
     }
-});
+};
